@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/ReSwift/ReSwift-Router"
   s.license          = { :type => "MIT", :file => "LICENSE.md" }
   s.author           = { "Benjamin Encz" => "me@benjamin-encz.de" }
-  s.source           = { :git => "https://github.com/rakutentech/ReSwift-Router", :branch => 'multinav' }
+  s.source           = { :git => "https://github.com/rakutentech/ReSwift-Router", :branch => 'multinav', :tag => s.version.to_s }
   s.ios.deployment_target     = '8.0'
   s.osx.deployment_target     = '10.10'
   s.tvos.deployment_target    = '9.0'
