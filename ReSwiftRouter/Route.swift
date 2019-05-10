@@ -19,8 +19,8 @@ public typealias RoutePath = [RouteSegment]
 ///
 public struct RouteSegment
 {
-	var id:RouteElementID = ""
-	var data:Any? = nil
+	public var id:RouteElementID = ""
+	public var data:Any? = nil
 }
 
 

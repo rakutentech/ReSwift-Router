@@ -10,7 +10,7 @@ import ReSwift
 ///
 public struct MultiNavigationReducer
 {
-	static func handleAction(_ action:Action, state:MultiNavigationState?) -> MultiNavigationState
+	public static func handleAction(_ action:Action, state:MultiNavigationState?) -> MultiNavigationState
 	{
 		let state = state ?? MultiNavigationState()
 		
@@ -31,7 +31,7 @@ public struct MultiNavigationReducer
 	///
 	/// Updates the state with the provided action's route.
 	///
-	static func updateState(_ state:MultiNavigationState, _ action:SetMultiRouteAction) -> MultiNavigationState
+	private static func updateState(_ state:MultiNavigationState, _ action:SetMultiRouteAction) -> MultiNavigationState
 	{
 		var state = state
 		let key = action.route.rootString
@@ -44,7 +44,7 @@ public struct MultiNavigationReducer
 	///
 	/// Updates the state with the provided action's route-specific data.
 	///
-	static func updateState(_ state:MultiNavigationState, _ action:SetMultiRouteSpecificDataAction) -> MultiNavigationState
+	private static func updateState(_ state:MultiNavigationState, _ action:SetMultiRouteSpecificDataAction) -> MultiNavigationState
 	{
 		var state = state
 		let key = action.route.pathString

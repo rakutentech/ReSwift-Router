@@ -118,7 +118,7 @@ open class Router<State:StateType>:StoreSubscriber
 	// MARK: - Route Transformation Logic
 	// ----------------------------------------------------------------------------------------------------
 	
-	static func getLargestCommonSubroute(_ oldRoute:Route, newRoute:Route) -> Int
+	private static func getLargestCommonSubroute(_ oldRoute:Route, newRoute:Route) -> Int
 	{
 		var largestCommonSubroute = -1
 		while (largestCommonSubroute + 1 < newRoute.segmentCount && largestCommonSubroute + 1 < oldRoute.segmentCount && newRoute[largestCommonSubroute + 1] == oldRoute[largestCommonSubroute + 1])
@@ -136,13 +136,13 @@ open class Router<State:StateType>:StoreSubscriber
 	/// route = ["tabBar"]
 	/// routables = [RootRoutable, TabBarRoutable]
 	///
-	static func getRoutableIndexForSegment(_ segment:Int) -> Int
+	private static func getRoutableIndexForSegment(_ segment:Int) -> Int
 	{
 		return segment + 1
 	}
 	
 	
-	static func routingActionsForTransitionFrom(_ oldRoute:Route, newRoute:Route) -> [RoutingActions]
+	private static func routingActionsForTransitionFrom(_ oldRoute:Route, newRoute:Route) -> [RoutingActions]
 	{
 		var routingActions:[RoutingActions] = []
 		

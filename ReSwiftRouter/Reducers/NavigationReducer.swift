@@ -34,7 +34,7 @@ public struct NavigationReducer
 	///
 	/// Updates the state with the provided action's route.
 	///
-	static func updateState(_ state:NavigationState, _ action:SetRouteAction) -> NavigationState
+	private static func updateState(_ state:NavigationState, _ action:SetRouteAction) -> NavigationState
 	{
 		var state = state
 		state.route = action.route
@@ -46,7 +46,7 @@ public struct NavigationReducer
 	///
 	/// Updates the state with the provided action's route-specific data.
 	///
-	static func updateState(_ state:NavigationState, _ action:SetRouteSpecificDataAction) -> NavigationState
+	private static func updateState(_ state:NavigationState, _ action:SetRouteSpecificDataAction) -> NavigationState
 	{
 		var state = state
 		let key = action.route.hashValue
