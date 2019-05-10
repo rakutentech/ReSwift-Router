@@ -10,34 +10,28 @@
 		254B3BAD1D3AD6DD00B1E4F0 /* RouteHashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B3BAC1D3AD6DD00B1E4F0 /* RouteHashSpec.swift */; };
 		254B3BAE1D3AD6DD00B1E4F0 /* RouteHashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B3BAC1D3AD6DD00B1E4F0 /* RouteHashSpec.swift */; };
 		254B3BAF1D3AD6DD00B1E4F0 /* RouteHashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B3BAC1D3AD6DD00B1E4F0 /* RouteHashSpec.swift */; };
-		25C0A9CD1C50AF6400139FA7 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C61C50AF6400139FA7 /* NavigationActions.swift */; };
-		25C0A9CE1C50AF6400139FA7 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C71C50AF6400139FA7 /* NavigationReducer.swift */; };
-		25C0A9CF1C50AF6400139FA7 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C81C50AF6400139FA7 /* NavigationState.swift */; };
 		25C0A9D01C50AF6400139FA7 /* ReSwiftRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25C0A9C91C50AF6400139FA7 /* ReSwiftRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25C0A9D11C50AF6400139FA7 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CA1C50AF6400139FA7 /* Routable.swift */; };
-		25C0A9D21C50AF6400139FA7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CB1C50AF6400139FA7 /* Router.swift */; };
 		25C0A9D91C50AF8D00139FA7 /* ReSwiftRouterIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9D41C50AF8B00139FA7 /* ReSwiftRouterIntegrationTests.swift */; };
 		25C0A9DA1C50AF8F00139FA7 /* ReSwiftRouterTestsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9D51C50AF8B00139FA7 /* ReSwiftRouterTestsUnitTests.swift */; };
-		6209C0531C54257D004E6B66 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C61C50AF6400139FA7 /* NavigationActions.swift */; };
-		6209C0541C542580004E6B66 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C71C50AF6400139FA7 /* NavigationReducer.swift */; };
-		6209C0551C542582004E6B66 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C81C50AF6400139FA7 /* NavigationState.swift */; };
-		6209C0561C542585004E6B66 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CA1C50AF6400139FA7 /* Routable.swift */; };
-		6209C0571C542588004E6B66 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CB1C50AF6400139FA7 /* Router.swift */; };
+		5B7D1467228548C600E11D4D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1456228548C600E11D4D /* Router.swift */; };
+		5B7D1468228548C600E11D4D /* SetMultiRouteSpecificDataAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1458228548C600E11D4D /* SetMultiRouteSpecificDataAction.swift */; };
+		5B7D1469228548C600E11D4D /* SetRouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1459228548C600E11D4D /* SetRouteAction.swift */; };
+		5B7D146A228548C600E11D4D /* SetMultiRouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D145A228548C600E11D4D /* SetMultiRouteAction.swift */; };
+		5B7D146B228548C600E11D4D /* ChangeRouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D145B228548C600E11D4D /* ChangeRouteAction.swift */; };
+		5B7D146C228548C600E11D4D /* PopRouteSegmentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D145C228548C600E11D4D /* PopRouteSegmentAction.swift */; };
+		5B7D146D228548C600E11D4D /* SetRouteSpecificDataAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D145D228548C600E11D4D /* SetRouteSpecificDataAction.swift */; };
+		5B7D146E228548C600E11D4D /* PushRouteSegmentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D145E228548C600E11D4D /* PushRouteSegmentAction.swift */; };
+		5B7D146F228548C600E11D4D /* MultiNavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1460228548C600E11D4D /* MultiNavigationReducer.swift */; };
+		5B7D1470228548C600E11D4D /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1461228548C600E11D4D /* NavigationReducer.swift */; };
+		5B7D1471228548C600E11D4D /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1463228548C600E11D4D /* NavigationState.swift */; };
+		5B7D1472228548C600E11D4D /* MultiNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1464228548C600E11D4D /* MultiNavigationState.swift */; };
+		5B7D1473228548C600E11D4D /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1465228548C600E11D4D /* Routable.swift */; };
+		5B7D1474228548C600E11D4D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D1466228548C600E11D4D /* Route.swift */; };
 		6209C05B1C5426C6004E6B66 /* ReSwiftRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25C0A9C91C50AF6400139FA7 /* ReSwiftRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6209C06B1C5427E0004E6B66 /* ReSwiftRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6209C0611C5427E0004E6B66 /* ReSwiftRouter.framework */; };
-		6209C0781C54281E004E6B66 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C61C50AF6400139FA7 /* NavigationActions.swift */; };
-		6209C0791C542822004E6B66 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C71C50AF6400139FA7 /* NavigationReducer.swift */; };
-		6209C07A1C542824004E6B66 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C81C50AF6400139FA7 /* NavigationState.swift */; };
-		6209C07B1C542826004E6B66 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CA1C50AF6400139FA7 /* Routable.swift */; };
 		6209C07C1C542828004E6B66 /* ReSwiftRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25C0A9C91C50AF6400139FA7 /* ReSwiftRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6209C07D1C54282D004E6B66 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CB1C50AF6400139FA7 /* Router.swift */; };
 		6209C07E1C542838004E6B66 /* ReSwiftRouterIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9D41C50AF8B00139FA7 /* ReSwiftRouterIntegrationTests.swift */; };
 		6209C07F1C54283A004E6B66 /* ReSwiftRouterTestsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9D51C50AF8B00139FA7 /* ReSwiftRouterTestsUnitTests.swift */; };
-		6209C09F1C542A63004E6B66 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C61C50AF6400139FA7 /* NavigationActions.swift */; };
-		6209C0A01C542A66004E6B66 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C71C50AF6400139FA7 /* NavigationReducer.swift */; };
-		6209C0A11C542A68004E6B66 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9C81C50AF6400139FA7 /* NavigationState.swift */; };
-		6209C0A21C542A6A004E6B66 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CA1C50AF6400139FA7 /* Routable.swift */; };
-		6209C0A31C542A6C004E6B66 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9CB1C50AF6400139FA7 /* Router.swift */; };
 		6209C0A41C542A71004E6B66 /* ReSwiftRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25C0A9C91C50AF6400139FA7 /* ReSwiftRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6209C0AA1C542B89004E6B66 /* ReSwiftRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6209C0881C5428DE004E6B66 /* ReSwiftRouter.framework */; };
 		6209C0AB1C542BC7004E6B66 /* ReSwiftRouterTestsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0A9D51C50AF8B00139FA7 /* ReSwiftRouterTestsUnitTests.swift */; };
@@ -95,15 +89,24 @@
 /* Begin PBXFileReference section */
 		254B3BAC1D3AD6DD00B1E4F0 /* RouteHashSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteHashSpec.swift; path = ReSwiftRouterTests/RouteHashSpec.swift; sourceTree = SOURCE_ROOT; };
 		25C0A9C51C50AF6400139FA7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReSwiftRouter/Info.plist; sourceTree = SOURCE_ROOT; };
-		25C0A9C61C50AF6400139FA7 /* NavigationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationActions.swift; path = ReSwiftRouter/NavigationActions.swift; sourceTree = SOURCE_ROOT; };
-		25C0A9C71C50AF6400139FA7 /* NavigationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationReducer.swift; path = ReSwiftRouter/NavigationReducer.swift; sourceTree = SOURCE_ROOT; };
-		25C0A9C81C50AF6400139FA7 /* NavigationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationState.swift; path = ReSwiftRouter/NavigationState.swift; sourceTree = SOURCE_ROOT; };
 		25C0A9C91C50AF6400139FA7 /* ReSwiftRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReSwiftRouter.h; path = ReSwiftRouter/ReSwiftRouter.h; sourceTree = SOURCE_ROOT; };
-		25C0A9CA1C50AF6400139FA7 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routable.swift; path = ReSwiftRouter/Routable.swift; sourceTree = SOURCE_ROOT; };
-		25C0A9CB1C50AF6400139FA7 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = ReSwiftRouter/Router.swift; sourceTree = SOURCE_ROOT; };
 		25C0A9D31C50AF8B00139FA7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReSwiftRouterTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		25C0A9D41C50AF8B00139FA7 /* ReSwiftRouterIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReSwiftRouterIntegrationTests.swift; path = ReSwiftRouterTests/ReSwiftRouterIntegrationTests.swift; sourceTree = SOURCE_ROOT; };
 		25C0A9D51C50AF8B00139FA7 /* ReSwiftRouterTestsUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReSwiftRouterTestsUnitTests.swift; path = ReSwiftRouterTests/ReSwiftRouterTestsUnitTests.swift; sourceTree = SOURCE_ROOT; };
+		5B7D1456228548C600E11D4D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		5B7D1458228548C600E11D4D /* SetMultiRouteSpecificDataAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMultiRouteSpecificDataAction.swift; sourceTree = "<group>"; };
+		5B7D1459228548C600E11D4D /* SetRouteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRouteAction.swift; sourceTree = "<group>"; };
+		5B7D145A228548C600E11D4D /* SetMultiRouteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMultiRouteAction.swift; sourceTree = "<group>"; };
+		5B7D145B228548C600E11D4D /* ChangeRouteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeRouteAction.swift; sourceTree = "<group>"; };
+		5B7D145C228548C600E11D4D /* PopRouteSegmentAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopRouteSegmentAction.swift; sourceTree = "<group>"; };
+		5B7D145D228548C600E11D4D /* SetRouteSpecificDataAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRouteSpecificDataAction.swift; sourceTree = "<group>"; };
+		5B7D145E228548C600E11D4D /* PushRouteSegmentAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushRouteSegmentAction.swift; sourceTree = "<group>"; };
+		5B7D1460228548C600E11D4D /* MultiNavigationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiNavigationReducer.swift; sourceTree = "<group>"; };
+		5B7D1461228548C600E11D4D /* NavigationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
+		5B7D1463228548C600E11D4D /* NavigationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		5B7D1464228548C600E11D4D /* MultiNavigationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiNavigationState.swift; sourceTree = "<group>"; };
+		5B7D1465228548C600E11D4D /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		5B7D1466228548C600E11D4D /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		6209C04B1C54256F004E6B66 /* ReSwiftRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReSwiftRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6209C0611C5427E0004E6B66 /* ReSwiftRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReSwiftRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6209C06A1C5427E0004E6B66 /* ReSwiftRouter-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReSwiftRouter-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +192,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B7D1457228548C600E11D4D /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D145B228548C600E11D4D /* ChangeRouteAction.swift */,
+				5B7D145C228548C600E11D4D /* PopRouteSegmentAction.swift */,
+				5B7D145E228548C600E11D4D /* PushRouteSegmentAction.swift */,
+				5B7D145A228548C600E11D4D /* SetMultiRouteAction.swift */,
+				5B7D1458228548C600E11D4D /* SetMultiRouteSpecificDataAction.swift */,
+				5B7D1459228548C600E11D4D /* SetRouteAction.swift */,
+				5B7D145D228548C600E11D4D /* SetRouteSpecificDataAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		5B7D145F228548C600E11D4D /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D1460228548C600E11D4D /* MultiNavigationReducer.swift */,
+				5B7D1461228548C600E11D4D /* NavigationReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		5B7D1462228548C600E11D4D /* State */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D1464228548C600E11D4D /* MultiNavigationState.swift */,
+				5B7D1463228548C600E11D4D /* NavigationState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		625E66C31C1FFE270027C288 = {
 			isa = PBXGroup;
 			children = (
@@ -215,14 +250,15 @@
 		625E66CF1C1FFE280027C288 /* ReSwiftRouter */ = {
 			isa = PBXGroup;
 			children = (
-				25C0A9C51C50AF6400139FA7 /* Info.plist */,
-				25C0A9C61C50AF6400139FA7 /* NavigationActions.swift */,
-				25C0A9C71C50AF6400139FA7 /* NavigationReducer.swift */,
-				25C0A9C81C50AF6400139FA7 /* NavigationState.swift */,
 				25C0A9C91C50AF6400139FA7 /* ReSwiftRouter.h */,
-				25C0A9CA1C50AF6400139FA7 /* Routable.swift */,
-				25C0A9CB1C50AF6400139FA7 /* Router.swift */,
+				25C0A9C51C50AF6400139FA7 /* Info.plist */,
+				5B7D1465228548C600E11D4D /* Routable.swift */,
+				5B7D1466228548C600E11D4D /* Route.swift */,
+				5B7D1456228548C600E11D4D /* Router.swift */,
+				5B7D1457228548C600E11D4D /* Actions */,
 				625E66E21C2000620027C288 /* Frameworks */,
+				5B7D145F228548C600E11D4D /* Reducers */,
+				5B7D1462228548C600E11D4D /* State */,
 			);
 			path = ReSwiftRouter;
 			sourceTree = "<group>";
@@ -523,7 +559,7 @@
 					};
 					625E66CC1C1FFE280027C288 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1010;
 					};
 					625E66F01C2000EA0027C288 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -665,11 +701,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6209C0541C542580004E6B66 /* NavigationReducer.swift in Sources */,
-				6209C0551C542582004E6B66 /* NavigationState.swift in Sources */,
-				6209C0571C542588004E6B66 /* Router.swift in Sources */,
-				6209C0531C54257D004E6B66 /* NavigationActions.swift in Sources */,
-				6209C0561C542585004E6B66 /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,11 +708,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6209C0791C542822004E6B66 /* NavigationReducer.swift in Sources */,
-				6209C07A1C542824004E6B66 /* NavigationState.swift in Sources */,
-				6209C07D1C54282D004E6B66 /* Router.swift in Sources */,
-				6209C0781C54281E004E6B66 /* NavigationActions.swift in Sources */,
-				6209C07B1C542826004E6B66 /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,11 +725,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6209C0A01C542A66004E6B66 /* NavigationReducer.swift in Sources */,
-				6209C0A11C542A68004E6B66 /* NavigationState.swift in Sources */,
-				6209C0A31C542A6C004E6B66 /* Router.swift in Sources */,
-				6209C09F1C542A63004E6B66 /* NavigationActions.swift in Sources */,
-				6209C0A21C542A6A004E6B66 /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,11 +742,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25C0A9CE1C50AF6400139FA7 /* NavigationReducer.swift in Sources */,
-				25C0A9CF1C50AF6400139FA7 /* NavigationState.swift in Sources */,
-				25C0A9D21C50AF6400139FA7 /* Router.swift in Sources */,
-				25C0A9CD1C50AF6400139FA7 /* NavigationActions.swift in Sources */,
-				25C0A9D11C50AF6400139FA7 /* Routable.swift in Sources */,
+				5B7D146A228548C600E11D4D /* SetMultiRouteAction.swift in Sources */,
+				5B7D146C228548C600E11D4D /* PopRouteSegmentAction.swift in Sources */,
+				5B7D1473228548C600E11D4D /* Routable.swift in Sources */,
+				5B7D1469228548C600E11D4D /* SetRouteAction.swift in Sources */,
+				5B7D1468228548C600E11D4D /* SetMultiRouteSpecificDataAction.swift in Sources */,
+				5B7D1474228548C600E11D4D /* Route.swift in Sources */,
+				5B7D146B228548C600E11D4D /* ChangeRouteAction.swift in Sources */,
+				5B7D1471228548C600E11D4D /* NavigationState.swift in Sources */,
+				5B7D1467228548C600E11D4D /* Router.swift in Sources */,
+				5B7D146D228548C600E11D4D /* SetRouteSpecificDataAction.swift in Sources */,
+				5B7D146E228548C600E11D4D /* PushRouteSegmentAction.swift in Sources */,
+				5B7D1472228548C600E11D4D /* MultiNavigationState.swift in Sources */,
+				5B7D1470228548C600E11D4D /* NavigationReducer.swift in Sources */,
+				5B7D146F228548C600E11D4D /* MultiNavigationReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,6 +1141,7 @@
 				PRODUCT_NAME = ReSwiftRouter;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1134,12 +1165,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.benjamin-encz.ReSwiftRouter";
 				PRODUCT_NAME = ReSwiftRouter;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		625E66FA1C2000EB0027C288 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1154,6 +1187,7 @@
 		625E66FB1C2000EB0027C288 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

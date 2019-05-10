@@ -1,55 +1,59 @@
 //
 //  Routable.swift
-//  Meet
-//
-//  Created by Benjamin Encz on 12/3/15.
-//  Copyright © 2015 DigiTales. All rights reserved.
 //
 
-public typealias RoutingCompletionHandler = () -> Void
+import UIKit
 
-public protocol Routable {
 
-    func pushRouteSegment(
-        _ routeElementIdentifier: RouteElementIdentifier,
-        animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) -> Routable
+// ----------------------------------------------------------------------------------------------------
+// MARK: - Typealias
+// ----------------------------------------------------------------------------------------------------
 
-    func popRouteSegment(
-        _ routeElementIdentifier: RouteElementIdentifier,
-        animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler)
+public typealias CompletionHandler = () -> Void
 
-    func changeRouteSegment(
-        _ from: RouteElementIdentifier,
-        to: RouteElementIdentifier,
-        animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) -> Routable
 
+// ----------------------------------------------------------------------------------------------------
+// MARK: - Protocol
+// ----------------------------------------------------------------------------------------------------
+
+public protocol Routable
+{
+	func push(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
+	func pop(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler)
+	func change(_ from:RouteSegment, to:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
 }
 
-extension Routable {
 
-    public func pushRouteSegment(
-        _ routeElementIdentifier: RouteElementIdentifier,
-        animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) -> Routable {
-            fatalError("This routable cannot push segments. You have not implemented it. (Asked \(type(of: self)) to push \(routeElementIdentifier))")
-    }
+///
+/// Protocol for routables so they can be initialized exclicitly. Implement this in your Routable if
+/// it should be instantiated as a generic.
+///
+public protocol RoutableInitializable:Routable
+{
+	init(_ viewController:UIViewController)
+}
 
-    public func popRouteSegment(
-        _ routeElementIdentifier: RouteElementIdentifier,
-        animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) {
-            fatalError("This routable cannot pop segments. You have not implemented it. (Asked \(type(of: self)) to pop \(routeElementIdentifier))")
-    }
 
-    public func changeRouteSegment(
-        _ from: RouteElementIdentifier,
-        to: RouteElementIdentifier,
-        animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) -> Routable {
-            fatalError("This routable cannot change segments. You have not implemented it. (Asked \(type(of: self)) to change from \(from) to \(to))")
-    }
+// ----------------------------------------------------------------------------------------------------
+// MARK: - Routable
+// ----------------------------------------------------------------------------------------------------
 
+extension Routable
+{
+	public func push(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
+	{
+		fatalError("This routable cannot change segments. You have not implemented it.")
+	}
+	
+	
+	public func pop(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler)
+	{
+		fatalError("This routable cannot change segments. You have not implemented it.")
+	}
+	
+	
+	public func change(_ from:RouteSegment, to:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
+	{
+		fatalError("This routable cannot change segments. You have not implemented it.")
+	}
 }
