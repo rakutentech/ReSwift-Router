@@ -7,8 +7,7 @@ import ReSwift
 
 ///
 /// A state that stores a dictionary with routes mapped by string keys.
-/// The keys represent a root route (aka root plus one of the tabbar items: talk, news, mypage, discover)
-/// and the mapped routes are the stored routes of that top-level route.
+/// The keys represent a root route and the mapped routes are the stored routes of that top-level route.
 ///
 /// This state should be solely used to store/restore the full route of each tabbar and should only be
 /// accessed in the rerouting middleware!
