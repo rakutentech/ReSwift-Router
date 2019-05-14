@@ -20,8 +20,8 @@ class RouteHashTests: QuickSpec {
             var routeHash2: RouteHash!
 
             beforeEach {
-                routeHash1 = RouteHash(route: ["part1", "part2"])
-                routeHash2 = RouteHash(route: ["part1", "part2"])
+                routeHash1 = Route(["part1", "part2"]).hashValue
+                routeHash2 = Route(["part1", "part2"]).hashValue
             }
 
             it("both hashs are considered equal") {
@@ -36,8 +36,8 @@ class RouteHashTests: QuickSpec {
             var routeHash2: RouteHash!
 
             beforeEach {
-                routeHash1 = RouteHash(route: ["part1", "part2"])
-                routeHash2 = RouteHash(route: ["part3", "part4"])
+                routeHash1 = Route(["part1", "part2"]).hashValue
+                routeHash2 = Route(["part3", "part4"]).hashValue
             }
 
             it("they are considered unequal") {

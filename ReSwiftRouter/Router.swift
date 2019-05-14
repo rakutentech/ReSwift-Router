@@ -141,8 +141,8 @@ open class Router<State:StateType>:StoreSubscriber
 		return segment + 1
 	}
 	
-	
-	private static func routingActionsForTransitionFrom(_ oldRoute:Route, newRoute:Route) -> [RoutingActions]
+	// unit test don't compile if this is private :(
+	static func routingActionsForTransitionFrom(_ oldRoute:Route, newRoute:Route) -> [RoutingActions]
 	{
 		var routingActions:[RoutingActions] = []
 		
