@@ -13,18 +13,18 @@ import ReSwift
 
 class MockRoutable: Routable {
 
-    var callsToPushRouteSegment: [(routeElement: RouteElementIdentifier, animated: Bool)] = []
-    var callsToPopRouteSegment: [(routeElement: RouteElementIdentifier, animated: Bool)] = []
+    var callsToPushRouteSegment: [(routeElement: RouteElementID, animated: Bool)] = []
+    var callsToPopRouteSegment: [(routeElement: RouteElementID, animated: Bool)] = []
     var callsToChangeRouteSegment: [(
-        from: RouteElementIdentifier,
-        to: RouteElementIdentifier,
+        from: RouteElementID,
+        to: RouteElementID,
         animated: Bool
     )] = []
 
     func pushRouteSegment(
-        _ routeElementIdentifier: RouteElementIdentifier,
+        _ routeElementIdentifier: RouteElementID,
         animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler
+        completionHandler: @escaping CompletionHandler
         ) -> Routable {
 
         callsToPushRouteSegment.append(
@@ -35,9 +35,9 @@ class MockRoutable: Routable {
     }
 
     func popRouteSegment(
-        _ routeElementIdentifier: RouteElementIdentifier,
+        _ routeElementIdentifier: RouteElementID,
         animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) {
+        completionHandler: @escaping CompletionHandler) {
 
         callsToPopRouteSegment.append(
             (routeElement: routeElementIdentifier, animated: animated)
@@ -46,10 +46,10 @@ class MockRoutable: Routable {
     }
 
     func changeRouteSegment(
-        _ from: RouteElementIdentifier,
-        to: RouteElementIdentifier,
+        _ from: RouteElementID,
+        to: RouteElementID,
         animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler
+        completionHandler: @escaping CompletionHandler
         ) -> Routable {
 
         completionHandler()
@@ -94,8 +94,8 @@ class SwiftFlowRouterIntegrationTests: QuickSpec {
                     class FakeRootRoutable: Routable {
                         var called = false
 
-                        func pushRouteSegment(_ routeElementIdentifier: RouteElementIdentifier,
-                            completionHandler: RoutingCompletionHandler) -> Routable {
+                        func pushRouteSegment(_ routeElementIdentifier: RouteElementID,
+                            completionHandler: CompletionHandler) -> Routable {
                                 called = true
                                 return MockRoutable()
                         }
@@ -117,13 +117,13 @@ class SwiftFlowRouterIntegrationTests: QuickSpec {
                     )
 
                     class FakeRootRoutable: Routable {
-                        var calledWithIdentifier: (RouteElementIdentifier?) -> Void
+                        var calledWithIdentifier: (RouteElementID?) -> Void
 
-                        init(calledWithIdentifier: @escaping (RouteElementIdentifier?) -> Void) {
+                        init(calledWithIdentifier: @escaping (RouteElementID?) -> Void) {
                             self.calledWithIdentifier = calledWithIdentifier
                         }
 
-                        func pushRouteSegment(_ routeElementIdentifier: RouteElementIdentifier, animated: Bool, completionHandler: @escaping RoutingCompletionHandler) -> Routable {
+                        func pushRouteSegment(_ routeElementIdentifier: RouteElementID, animated: Bool, completionHandler: @escaping CompletionHandler) -> Routable {
                                 calledWithIdentifier(routeElementIdentifier)
 
                                 completionHandler()
@@ -153,13 +153,13 @@ class SwiftFlowRouterIntegrationTests: QuickSpec {
                     )
 
                     class FakeChildRoutable: Routable {
-                        var calledWithIdentifier: (RouteElementIdentifier?) -> Void
+                        var calledWithIdentifier: (RouteElementID?) -> Void
 
-                        init(calledWithIdentifier: @escaping (RouteElementIdentifier?) -> Void) {
+                        init(calledWithIdentifier: @escaping (RouteElementID?) -> Void) {
                             self.calledWithIdentifier = calledWithIdentifier
                         }
 
-                        func pushRouteSegment(_ routeElementIdentifier: RouteElementIdentifier, animated: Bool, completionHandler: @escaping RoutingCompletionHandler) -> Routable {
+                        func pushRouteSegment(_ routeElementIdentifier: RouteElementID, animated: Bool, completionHandler: @escaping CompletionHandler) -> Routable {
                                 calledWithIdentifier(routeElementIdentifier)
 
                                 completionHandler()
@@ -181,9 +181,9 @@ class SwiftFlowRouterIntegrationTests: QuickSpec {
                                 self.injectedRoutable = injectedRoutable
                             }
 
-                            func pushRouteSegment(_ routeElementIdentifier: RouteElementIdentifier,
+                            func pushRouteSegment(_ routeElementIdentifier: RouteElementID,
                                 animated: Bool,
-                                completionHandler: @escaping RoutingCompletionHandler) -> Routable {
+                                completionHandler: @escaping CompletionHandler) -> Routable {
                                     completionHandler()
                                     return injectedRoutable
                             }
@@ -212,12 +212,12 @@ class SwiftFlowRouterIntegrationTests: QuickSpec {
             context("when setting route specific data") {
 
                 beforeEach {
-                    store.dispatch(SetRouteSpecificData(route: ["part1", "part2"], data: "UserID_10"))
+                    store.dispatch(SetRouteSpecificDataAction(route: Route(["part1", "part2"]), data: "UserID_10"))
                 }
 
                 it("allows accessing the data when providing the expected type") {
-                    let data: String? = store.state.navigationState.getRouteSpecificState(
-                        ["part1", "part2"]
+                    let data: String? = store.state.navigationState.getRouteSpecificData(
+                        Route(["part1", "part2"])
                     )
 
                     expect(data).toEventually(equal("UserID_10"))
