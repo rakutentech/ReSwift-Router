@@ -10,42 +10,44 @@ import ReSwiftRouter
 import Quick
 import Nimble
 
-class RouteHashTests: QuickSpec {
 
-    override func spec() {
-
-        describe("when two route hashs are initialized with the same elements") {
-
-            var routeHash1: RouteHash!
-            var routeHash2: RouteHash!
-
-            beforeEach {
-                routeHash1 = RouteHash(route: ["part1", "part2"])
-                routeHash2 = RouteHash(route: ["part1", "part2"])
-            }
-
-            it("both hashs are considered equal") {
-                expect(routeHash1).to(equal(routeHash2))
-            }
-
-        }
-
-        describe("when two route hashs are initialized with different elements") {
-
-            var routeHash1: RouteHash!
-            var routeHash2: RouteHash!
-
-            beforeEach {
-                routeHash1 = RouteHash(route: ["part1", "part2"])
-                routeHash2 = RouteHash(route: ["part3", "part4"])
-            }
-
-            it("they are considered unequal") {
-                expect(routeHash1).toNot(equal(routeHash2))
-            }
-
-        }
-
-    }
-
+class RouteHashTests:QuickSpec
+{
+	
+	override func spec()
+	{
+		describe("when two route hashs are initialized with the same elements")
+		{
+			var routeHash1:RouteHash!
+			var routeHash2:RouteHash!
+			
+			beforeEach
+			{
+				routeHash1 = Route(["part1", "part2"]).hashValue
+				routeHash2 = Route(["part1", "part2"]).hashValue
+			}
+			
+			it("both hashs are considered equal")
+			{
+				expect(routeHash1).to(equal(routeHash2))
+			}
+		}
+		
+		describe("when two route hashs are initialized with different elements")
+		{
+			var routeHash1:RouteHash!
+			var routeHash2:RouteHash!
+			
+			beforeEach
+			{
+				routeHash1 = Route(["part1", "part2"]).hashValue
+				routeHash2 = Route(["part3", "part4"]).hashValue
+			}
+			
+			it("they are considered unequal")
+			{
+				expect(routeHash1).toNot(equal(routeHash2))
+			}
+		}
+	}
 }
