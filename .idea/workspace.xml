@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f840ea5e-f2eb-444f-ad21-ca172c325569" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReSwiftRouter.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReSwiftRouter.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReSwiftRouter/Router.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ReSwiftRouter/Router.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReSwiftRouterTests/ReSwiftRouterIntegrationTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ReSwiftRouterTests/ReSwiftRouterIntegrationTests.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReSwiftRouterTests/ReSwiftRouterTestsUnitTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ReSwiftRouterTests/ReSwiftRouterTestsUnitTests.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReSwiftRouterTests/RouteHashSpec.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ReSwiftRouterTests/RouteHashSpec.swift" afterDir="false" />
     </list>
-    <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/ReSwiftRouter-apmuikliycitlgfctpfktgpiyuer/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/ReSwiftRouter-epifnvggdyzshmcqyhbmuygnughz/Build/Intermediates.noindex/" />
+    <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/ReSwiftRouter-apmuikliycitlgfctpfktgpiyuer/Build/Intermediates.noindex/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +17,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ReSwiftRouter/Router.swift">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="143" selection-start-line="143" selection-end-line="143" />
+            <state relative-caret-position="840">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
@@ -68,6 +64,7 @@
         <option value="$PROJECT_DIR$/ReSwiftRouterTests/RouteHashSpec.swift" />
         <option value="$PROJECT_DIR$/ReSwiftRouterTests/ReSwiftRouterTestsUnitTests.swift" />
         <option value="$PROJECT_DIR$/ReSwiftRouterTests/ReSwiftRouterIntegrationTests.swift" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -88,16 +85,32 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="606" />
-    <option name="y" value="-1417" />
-    <option name="width" value="1280" />
-    <option name="height" value="1417" />
+    <option name="x" value="1440" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Cidr.FilesView" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ReSwiftRouter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ReSwift-Router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ReSwiftRouter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ReSwift-Router" type="462c0819:PsiDirectoryNode" />
+              <item name="ReSwiftRouter" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -133,22 +146,6 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="ReSwiftRouter" type="1d218c8b:XcodeProjectNode" />
               <item name="ReSwiftRouterTests" type="fcab9f18:XcodeViewNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Cidr.FilesView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ReSwiftRouter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReSwift-Router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReSwiftRouter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReSwift-Router" type="462c0819:PsiDirectoryNode" />
-              <item name="ReSwiftRouter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,6 +206,8 @@
       <option name="presentableId" value="Default" />
       <updated>1557467937823</updated>
       <workItem from="1557467940941" duration="2319000" />
+      <workItem from="1557817707850" duration="637000" />
+      <workItem from="1557886912021" duration="550000" />
     </task>
     <servers />
   </component>
@@ -228,9 +227,12 @@
     <history-entry file="ReSwiftRouterUnitTests - 2019.05.14 at 15h 19m 58s.xml">
       <configuration name="ReSwiftRouterUnitTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
+    <history-entry file="ReSwiftRouterUnitTests - 2019.05.15 at 11h 29m 44s.xml">
+      <configuration name="ReSwiftRouterUnitTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3728000" />
+    <option name="totallyTimeSpent" value="5874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
@@ -238,7 +240,7 @@
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49900794" visible="true" weight="0.19739583" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49900794" visible="true" weight="0.15885417" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
@@ -256,9 +258,9 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-      <window_info anchor="right" id="Structure" order="6" sideWeight="0.50099206" side_tool="true" visible="true" weight="0.1546875" />
-      <window_info anchor="right" auto_hide="true" x="2404" y="83" width="634" height="1014" id="Run" order="7" type="SLIDING" weight="0.78333336" />
-      <window_info anchor="right" id="Messages" order="8" side_tool="true" type="SLIDING" weight="0.7828125" />
+      <window_info anchor="right" id="Structure" order="6" sideWeight="0.50099206" side_tool="true" visible="true" weight="0.115625" />
+      <window_info anchor="right" auto_hide="true" x="2404" y="83" width="634" height="1014" id="Run" internal_type="SLIDING" order="7" type="SLIDING" weight="0.821875" />
+      <window_info anchor="right" id="Messages" internal_type="SLIDING" order="8" side_tool="true" type="SLIDING" weight="0.7828125" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,8 +391,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ReSwiftRouter/Router.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        <state relative-caret-position="405">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
