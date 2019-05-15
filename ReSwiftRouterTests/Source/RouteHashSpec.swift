@@ -13,10 +13,9 @@ import Nimble
 
 class RouteHashTests:QuickSpec
 {
-	
 	override func spec()
 	{
-		describe("when two route hashs are initialized with the same elements")
+		describe("When two route hashs are initialized with the same elements")
 		{
 			var routeHash1:RouteHash!
 			var routeHash2:RouteHash!
@@ -33,7 +32,7 @@ class RouteHashTests:QuickSpec
 			}
 		}
 		
-		describe("when two route hashs are initialized with different elements")
+		describe("When two route hashs are initialized with different elements")
 		{
 			var routeHash1:RouteHash!
 			var routeHash2:RouteHash!

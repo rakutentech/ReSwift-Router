@@ -12,37 +12,36 @@ import ReSwift
 @testable import ReSwiftRouter
 
 
+// ----------------------------------------------------------------------------------------------------
+// MARK: - Routable
+// ----------------------------------------------------------------------------------------------------
+
 class MockRoutable:Routable
 {
 	var callsToPushRouteSegment:[(routeElement:RouteElementID, animated:Bool)] = []
 	var callsToPopRouteSegment:[(routeElement:RouteElementID, animated:Bool)] = []
-	var callsToChangeRouteSegment:
-	[(
-		from:RouteElementID,
-		to:RouteElementID,
-		animated:Bool
-	)] = []
+	var callsToChangeRouteSegment: [(from:RouteElementID, to:RouteElementID, animated:Bool)] = []
 	
 	
-	func pushRouteSegment(_ routeElementIdentifier:RouteElementID, animated:Bool, completionHandler:@escaping CompletionHandler) -> Routable
+	func push(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
 	{
-		callsToPushRouteSegment.append((routeElement: routeElementIdentifier, animated: animated))
-		completionHandler()
+		callsToPushRouteSegment.append((routeElement: segment.id, animated: animated))
+		completion()
 		return MockRoutable()
 	}
 	
 	
-	func popRouteSegment(_ routeElementIdentifier:RouteElementID, animated:Bool, completionHandler:@escaping CompletionHandler)
+	func pop(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler)
 	{
-		callsToPopRouteSegment.append((routeElement: routeElementIdentifier, animated: animated))
-		completionHandler()
+		callsToPopRouteSegment.append((routeElement: segment.id, animated: animated))
+		completion()
 	}
 	
 	
-	func changeRouteSegment(_ from:RouteElementID, to:RouteElementID, animated:Bool, completionHandler:@escaping CompletionHandler) -> Routable
+	func change(_ from:RouteSegment, to:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
 	{
-		completionHandler()
-		callsToChangeRouteSegment.append((from: from, to: to, animated: animated))
+		completion()
+		callsToChangeRouteSegment.append((from: from.id, to: to.id, animated: animated))
 		return MockRoutable()
 	}
 }
@@ -67,11 +66,15 @@ func appReducer(action:Action, state:FakeAppState?) -> FakeAppState
 }
 
 
+// ----------------------------------------------------------------------------------------------------
+// MARK: - SwiftFlowRouterIntegrationTests
+// ----------------------------------------------------------------------------------------------------
+
 class SwiftFlowRouterIntegrationTests:QuickSpec
 {
 	override func spec()
 	{
-		describe("routing calls")
+		describe("Routing calls")
 		{
 			var store:Store<FakeAppState>!
 			beforeEach
@@ -79,14 +82,14 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 				store = Store(reducer: appReducer, state: FakeAppState())
 			}
 			
-			describe("setup")
+			describe("Setup")
 			{
 				it("does not request the root view controller when no route is provided")
 				{
 					class FakeRootRoutable:Routable
 					{
 						var called = false
-						func pushRouteSegment(_ routeElementIdentifier:RouteElementID, completionHandler:CompletionHandler) -> Routable
+						func push(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
 						{
 							called = true
 							return MockRoutable()
@@ -97,10 +100,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 					let _ = Router(store: store, rootRoutable: routable)
 					{
 						state in
-						state.select
-						{
-							$0.navigationState
-						}
+							state.select { $0.navigationState }
 					}
 					
 					expect(routable.called).to(beFalse())
@@ -118,10 +118,10 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 							self.calledWithIdentifier = calledWithIdentifier
 						}
 						
-						func pushRouteSegment(_ routeElementIdentifier:RouteElementID, animated:Bool, completionHandler:@escaping CompletionHandler) -> Routable
+						func push(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
 						{
-							calledWithIdentifier(routeElementIdentifier)
-							completionHandler()
+							calledWithIdentifier(segment.id)
+							completion()
 							return MockRoutable()
 						}
 					}
@@ -141,10 +141,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 							let _ = Router(store: store, rootRoutable: rootRoutable)
 							{
 								state in
-								state.select
-								{
-									$0.navigationState
-								}
+									state.select { $0.navigationState }
 							}
 					}
 				}
@@ -161,10 +158,10 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 							self.calledWithIdentifier = calledWithIdentifier
 						}
 						
-						func pushRouteSegment(_ routeElementIdentifier:RouteElementID, animated:Bool, completionHandler:@escaping CompletionHandler) -> Routable
+						func push(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
 						{
-							calledWithIdentifier(routeElementIdentifier)
-							completionHandler()
+							calledWithIdentifier(segment.id)
+							completion()
 							return MockRoutable()
 						}
 					}
@@ -175,10 +172,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 						let fakeChildRoutable = FakeChildRoutable()
 						{
 							identifier in
-							if identifier == "SecondViewController"
-							{
-								completion()
-							}
+								if identifier == "SecondViewController" { completion() }
 						}
 						
 						class FakeRootRoutable:Routable
@@ -190,9 +184,9 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 								self.injectedRoutable = injectedRoutable
 							}
 							
-							func pushRouteSegment(_ routeElementIdentifier:RouteElementID, animated:Bool, completionHandler:@escaping CompletionHandler) -> Routable
+							func push(_ segment:RouteSegment, animated:Bool, completion:@escaping CompletionHandler) -> Routable
 							{
-								completionHandler()
+								completion()
 								return injectedRoutable
 							}
 						}
@@ -210,8 +204,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 			}
 		}
 		
-		
-		describe("route specific data")
+		describe("Route specific data")
 		{
 			var store:Store<FakeAppState>!
 			beforeEach
@@ -219,7 +212,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 				store = Store(reducer: appReducer, state: nil)
 			}
 			
-			context("when setting route specific data")
+			context("When setting route specific data")
 			{
 				beforeEach
 				{
@@ -234,7 +227,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 			}
 		}
 		
-		describe("configuring animated/unanimated navigation")
+		describe("Configuring animated/unanimated navigation")
 		{
 			var store:Store<FakeAppState>!
 			var mockRoutable:MockRoutable!
@@ -247,17 +240,14 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 				router = Router(store: store, rootRoutable: mockRoutable)
 				{
 					state in
-					state.select
-					{
-						$0.navigationState
-					}
+						state.select { $0.navigationState }
 				}
 				
 				// silence router not read warning, need to keep router alive via reference
 				_ = router
 			}
 			
-			context("when dispatching an animated route change")
+			context("When dispatching an animated route change")
 			{
 				beforeEach
 				{
@@ -270,7 +260,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 				}
 			}
 			
-			context("when dispatching an unanimated route change")
+			context("When dispatching an unanimated route change")
 			{
 				beforeEach
 				{
@@ -283,7 +273,7 @@ class SwiftFlowRouterIntegrationTests:QuickSpec
 				}
 			}
 			
-			context("when dispatching a default route change")
+			context("When dispatching a default route change")
 			{
 				beforeEach
 				{
