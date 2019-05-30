@@ -61,8 +61,7 @@ func fakeReducer(action:Action, state:FakeAppState?) -> FakeAppState
 
 func appReducer(action:Action, state:FakeAppState?) -> FakeAppState
 {
-	return FakeAppState(navigationState: NavigationReducer.handleAction(action, state: state?.navigationState)
-	)
+	return FakeAppState(navigationState: NavigationReducer.handleAction(action, state: state?.navigationState))
 }
 
 

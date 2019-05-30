@@ -30,7 +30,7 @@ public protocol Routable
 ///
 public protocol RoutableInitializable:Routable
 {
-	init(_ viewController:UIViewController)
+	init(_ viewController:UIViewController?)
 }
 
 
