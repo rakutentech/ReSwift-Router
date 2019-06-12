@@ -54,3 +54,4 @@ Carthage
 
 fastlane/report.xml
 fastlane/screenshots
+/.idea/workspace.xml
