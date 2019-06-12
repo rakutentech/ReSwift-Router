@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name                      = "ReSwiftRouter"
-  s.version                   = "0.6.0"
+  s.version                   = "0.7.0"
   s.summary                   = "Declarative Routing for ReSwift"
   s.description               = <<-DESC
                                    A declarative router for ReSwift. Allows developers to declare routes in a similar manner as
                                    URLs are used on the web. Using ReSwiftRouter you can navigate your app by defining the target location
                                    in the form of a URL-like sequence of identifiers.
                                 DESC
-  s.homepage                  = "https://github.com/ReSwift/ReSwift-Router"
+  s.homepage                  = "https://github.com/rakutentech/ReSwift-Router"
   s.license                   = { :type => "MIT", :file => "LICENSE.md" }
   s.author                    = { "Benjamin Encz" => "me@benjamin-encz.de" }
   s.source                    = { :git => "https://github.com/rakutentech/ReSwift-Router", :branch => 'multinav', :tag => s.version.to_s }
@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
   s.requires_arc              = true
   s.source_files              = 'ReSwiftRouter/Source/**/*.swift'
-  s.dependency                  'ReSwift', '~> 4.0.0'
+  s.dependency                  'ReSwift', '~> 4.1.1'
 end
