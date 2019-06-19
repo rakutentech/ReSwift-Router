@@ -73,12 +73,12 @@ extension Routable
 /// Routable class that can used as base for routables. It provides a lot of the shared functionality
 /// such as taking care of navigating to sub views and default implementation for change/push/pop.
 ///
-public class BaseRoutable: Routable
+open class BaseRoutable: Routable
 {
 	let _viewController:UIViewController?
 
 
-	required init(_ viewController: UIViewController?)
+	public required init(_ viewController: UIViewController?)
 	{
 		_viewController = viewController
 	}
@@ -107,7 +107,7 @@ public class BaseRoutable: Routable
 	///
 	/// Navigates to a sub view. The routableType's view controller needs to implement RoutableViewController.
 	///
-	func navigateToSubView<T:BaseRoutable>(_ id:String, _ routableType:T.Type, _ animated:Bool = true, _ completion:@escaping CompletionHandler) -> T
+	public func navigateToSubView<T:BaseRoutable>(_ id:String, _ routableType:T.Type, _ animated:Bool = true, _ completion:@escaping CompletionHandler) -> T
 	{
 		/* Is this routable's viewController a navigation controller that has a
 		   navigatable view controller as it's first sub view controller? */
