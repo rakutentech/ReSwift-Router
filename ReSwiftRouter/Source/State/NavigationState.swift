@@ -11,7 +11,10 @@ import ReSwift
 
 public protocol HasNavigationState
 {
-	var navigationState:NavigationState { get set }
+	var navigationState: NavigationState
+	{
+		get set
+	}
 }
 
 
@@ -22,17 +25,10 @@ public protocol HasNavigationState
 public struct NavigationState
 {
 	public var route = Route()
-	public var routeSpecificData:[RouteHash:Any] = [:]
-	var changeRouteAnimated:Bool = true
-	
-	public init() { }
-}
+	var changeRouteAnimated: Bool = true
 
 
-extension NavigationState
-{
-	public func getRouteSpecificData<T>(_ route:Route) -> T?
+	public init()
 	{
-		return routeSpecificData[route.hashValue] as? T
 	}
 }

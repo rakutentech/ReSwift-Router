@@ -20,12 +20,10 @@
 		783691EDD833239408D1D584 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836935B58A9B77106B62F4E /* NavigationReducer.swift */; };
 		783692D5621EC56D39DCD62E /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369E9A607354D7ECB0AE07 /* Routable.swift */; };
 		783692F5B11486DFAF29881F /* ReSwiftRouterTestsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369D0E61158D7F50E15021 /* ReSwiftRouterTestsUnitTests.swift */; };
-		7836952E4AA2E23CE8522C8D /* SetMultiRouteSpecificDataAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369672DE24B357B24CA4DD /* SetMultiRouteSpecificDataAction.swift */; };
 		783695B586165A24478B5EA3 /* SetMultiRouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369BCED50FD83DFB0655AB /* SetMultiRouteAction.swift */; };
 		783695D897A10C11444D0CA1 /* RouteHashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783692780C2056D472A8D1D0 /* RouteHashSpec.swift */; };
 		78369661B88B92306F01A867 /* ReSwiftRouterIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783698D3F1D955A1EA8269FF /* ReSwiftRouterIntegrationTests.swift */; };
 		7836972EC81E2B2C9DF133A3 /* MultiNavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783698130A4F5BD236F4F781 /* MultiNavigationReducer.swift */; };
-		783697A226F6EBBCA4F1E90E /* SetRouteSpecificDataAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369AE597BDA92353FF4F73 /* SetRouteSpecificDataAction.swift */; };
 		783697AB566707919BFEB648 /* ReSwiftRouterTestsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369D0E61158D7F50E15021 /* ReSwiftRouterTestsUnitTests.swift */; };
 		783697DA0DC0B7F7A4B04DDA /* SetRouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369786DF8D5FA30BE07070 /* SetRouteAction.swift */; };
 		7836993A6BA62E9D0869B3C5 /* RouteHashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783692780C2056D472A8D1D0 /* RouteHashSpec.swift */; };
@@ -103,12 +101,10 @@
 		783692780C2056D472A8D1D0 /* RouteHashSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteHashSpec.swift; sourceTree = "<group>"; };
 		7836935B58A9B77106B62F4E /* NavigationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
 		783694BB9DC33AD13EBC77D7 /* MultiNavigationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiNavigationState.swift; sourceTree = "<group>"; };
-		78369672DE24B357B24CA4DD /* SetMultiRouteSpecificDataAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMultiRouteSpecificDataAction.swift; sourceTree = "<group>"; };
 		78369786DF8D5FA30BE07070 /* SetRouteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRouteAction.swift; sourceTree = "<group>"; };
 		783698130A4F5BD236F4F781 /* MultiNavigationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiNavigationReducer.swift; sourceTree = "<group>"; };
 		783698D3F1D955A1EA8269FF /* ReSwiftRouterIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReSwiftRouterIntegrationTests.swift; sourceTree = "<group>"; };
 		78369A31DED13860B33423A7 /* PopRouteSegmentAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopRouteSegmentAction.swift; sourceTree = "<group>"; };
-		78369AE597BDA92353FF4F73 /* SetRouteSpecificDataAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRouteSpecificDataAction.swift; sourceTree = "<group>"; };
 		78369B30AB37A2A193ECD3EC /* ChangeRouteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeRouteAction.swift; sourceTree = "<group>"; };
 		78369B364B163F2C9373C9F7 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		78369BCED50FD83DFB0655AB /* SetMultiRouteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMultiRouteAction.swift; sourceTree = "<group>"; };
@@ -305,9 +301,7 @@
 				78369A31DED13860B33423A7 /* PopRouteSegmentAction.swift */,
 				783690DBCB56119D55F366B1 /* PushRouteSegmentAction.swift */,
 				78369BCED50FD83DFB0655AB /* SetMultiRouteAction.swift */,
-				78369672DE24B357B24CA4DD /* SetMultiRouteSpecificDataAction.swift */,
 				78369786DF8D5FA30BE07070 /* SetRouteAction.swift */,
-				78369AE597BDA92353FF4F73 /* SetRouteSpecificDataAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -764,9 +758,7 @@
 				7836911D62A3D54DBE9BBFD8 /* PopRouteSegmentAction.swift in Sources */,
 				78369102BB418521D13967AF /* PushRouteSegmentAction.swift in Sources */,
 				783695B586165A24478B5EA3 /* SetMultiRouteAction.swift in Sources */,
-				7836952E4AA2E23CE8522C8D /* SetMultiRouteSpecificDataAction.swift in Sources */,
 				783697DA0DC0B7F7A4B04DDA /* SetRouteAction.swift in Sources */,
-				783697A226F6EBBCA4F1E90E /* SetRouteSpecificDataAction.swift in Sources */,
 				7836972EC81E2B2C9DF133A3 /* MultiNavigationReducer.swift in Sources */,
 				783691EDD833239408D1D584 /* NavigationReducer.swift in Sources */,
 				78369BFBA916186D9B51AE71 /* MultiNavigationState.swift in Sources */,

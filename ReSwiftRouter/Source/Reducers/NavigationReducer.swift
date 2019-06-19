@@ -13,45 +13,30 @@ import ReSwift
 ///
 public struct NavigationReducer
 {
-	public static func handleAction(_ action:Action, state:NavigationState?) -> NavigationState
+	public static func handleAction(_ action: Action, state: NavigationState?) -> NavigationState
 	{
 		let state = state ?? NavigationState()
-		
+
 		switch action
 		{
 			case let action as SetRouteAction:
 				return updateState(state, action)
-			case let action as SetRouteSpecificDataAction:
-				return updateState(state, action)
 			default:
 				break
 		}
-		
+
 		return state
 	}
-	
-	
+
+
 	///
 	/// Updates the state with the provided action's route.
 	///
-	private static func updateState(_ state:NavigationState, _ action:SetRouteAction) -> NavigationState
+	private static func updateState(_ state: NavigationState, _ action: SetRouteAction) -> NavigationState
 	{
 		var state = state
 		state.route = action.route
 		state.changeRouteAnimated = action.animated
-		return state
-	}
-	
-	
-	///
-	/// Updates the state with the provided action's route-specific data.
-	///
-	private static func updateState(_ state:NavigationState, _ action:SetRouteSpecificDataAction) -> NavigationState
-	{
-		var state = state
-		let key = action.route.hashValue
-		let value = action.data
-		state.routeSpecificData[key] = value
 		return state
 	}
 }

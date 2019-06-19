@@ -17,8 +17,6 @@ public struct MultiNavigationState
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
-	
-	public var routeMap:[String:Route] = [:]
-	public var routeSpecificDataMap:[String:Any] = [:]
-	
+
+	public var routeMap: [String: Route] = [:]
 }
