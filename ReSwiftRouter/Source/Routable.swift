@@ -75,7 +75,7 @@ extension Routable
 ///
 open class BaseRoutable: Routable
 {
-	let _viewController:UIViewController?
+	public let _viewController:UIViewController?
 
 
 	public required init(_ viewController: UIViewController?)
@@ -84,21 +84,21 @@ open class BaseRoutable: Routable
 	}
 
 
-	public func change(_ from: RouteSegment, to: RouteSegment, animated: Bool, completion: @escaping CompletionHandler) -> Routable
+	open func change(_ from: RouteSegment, to: RouteSegment, animated: Bool, completion: @escaping CompletionHandler) -> Routable
 	{
 		completion()
 		return self
 	}
 
 
-	public func push(_ segment: RouteSegment, animated: Bool, completion: @escaping CompletionHandler) -> Routable
+	open func push(_ segment: RouteSegment, animated: Bool, completion: @escaping CompletionHandler) -> Routable
 	{
 		completion()
 		return self
 	}
 
 
-	public func pop(_ segment: RouteSegment, animated: Bool, completion: @escaping CompletionHandler)
+	open func pop(_ segment: RouteSegment, animated: Bool, completion: @escaping CompletionHandler)
 	{
 		completion()
 	}
